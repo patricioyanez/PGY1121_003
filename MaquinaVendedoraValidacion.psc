@@ -15,21 +15,28 @@ Algoritmo MaquinaVendedoraValidacion
 		Escribir "seleccione bebida:"
 		Leer opcion
 		
-		Escribir "Ingrese la cantidad a comprar"
-		Leer cantidad
-		
-		si opcion = 1 Entonces
-			total = 600 * cantidad
-		SiNo
-			si opcion = 2 Entonces
-				total = 500 * cantidad
-			SiNo
-				total = 350 * cantidad
-			FinSi
+		si opcion < 1 o opcion > 3 Entonces
+			Escribir "Opcion no valida"
+		sino
+			
+			Escribir "Ingrese la cantidad a comprar"
+			Leer cantidad
+			
+			si cantidad < 1 Entonces
+				Escribir "cantidad no valida"
+			sino
+				si opcion = 1 Entonces
+					total = 600 * cantidad
+				SiNo
+					si opcion = 2 Entonces
+						total = 500 * cantidad
+					SiNo
+						total = 350 * cantidad
+					FinSi
+				FinSi			
+				Escribir "El total a pagar es: ", total
+			FinSi			
 		FinSi
-		
-		Escribir "El total a pagar es: ", total
-		
 		
 FinAlgoritmo
 
