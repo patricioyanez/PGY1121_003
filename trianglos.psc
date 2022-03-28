@@ -19,6 +19,8 @@ Algoritmo trianglos
 		sino
 			si lado1 = lado2 o lado1 = lado3 o lado2 = lado3 Entonces
 				Escribir "Es un triangulo isoceles"
+			SiNo
+				Escribir "Es un triangulo Escaleno"
 			FinSi
 		FinSi
 	SiNo
