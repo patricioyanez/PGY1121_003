@@ -20,7 +20,7 @@ Algoritmo EjemploMiestrasMenu
 			Esperar Tecla
 		FinSi
 		si opcion = 2 Entonces
-			Escribir "Nos vimos! (Karen Rojo)"
+			Escribir "Nos vemos!"
 			Escribir "Presione cualquier tecla para volver al menú"
 			Esperar Tecla
 		FinSi
