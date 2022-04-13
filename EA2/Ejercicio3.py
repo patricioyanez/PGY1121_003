@@ -1,0 +1,15 @@
+nombre = input("Ingrese su nombre   : ")
+rut = input("Ingrese su rut      : ")
+correo = input("Ingrese su correo   : ")
+fono = input("Ingrese su fono     : ")
+
+nombre = nombre.upper()
+rut = rut.upper()
+correo = correo.upper()
+fono = fono.upper()
+
+print("Los datos ingresados son:")
+print(f"Nombre  :{nombre}")
+print(f"Rut     :{rut}")
+print(f"Correo  :{correo}")
+print(f"Fono    :{fono}")

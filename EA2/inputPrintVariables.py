@@ -12,3 +12,5 @@ print("Su nombre es:", nombre)
 
 apellido = input("Ingrese su apellido:")
 print("Su apellido es:", apellido)
+edad = 22
+print("su edad es " + str(edad))
