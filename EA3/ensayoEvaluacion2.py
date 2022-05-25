@@ -68,7 +68,13 @@ while opcion != 4:
         
         celular = input("ingrese su celular :")
         tipo = input("Ingrese tipo de cliente 1.-Premium 2.-Gold 3.-Silver")
-        if not tipo in ['1', '2', '3']:
+        if tipo == "1":
+            tipo = "PREMIUM"
+        elif tipo == "2":
+            tipo = "GOLD"
+        elif tipo == "3":
+            tipo = "SILVER"
+        else:
             print("El tipo no es válido")
             input("Presione enter para continuar......")
             continue
@@ -131,8 +137,11 @@ while opcion != 4:
             print("Genero           :", clienteEncontrado[6])
             print("Celular          :", clienteEncontrado[7])
             print("Tipo             :", clienteEncontrado[8])
-            print("Fecha Suscripción:", clienteEncontrado[10])     
 
+            if len(clienteEncontrado) == 11:
+                print("Fecha Suscripción:", clienteEncontrado[10])     
+            else:
+                print("Cliente no suscrito")
 
     elif opcion == 4:
         print("Aplicación cerrada")
