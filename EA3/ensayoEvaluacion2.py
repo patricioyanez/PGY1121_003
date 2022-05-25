@@ -59,6 +59,23 @@ while opcion != 4:
             input("Presione enter para continuar......")
             continue
 
+        genero = input("Ingrese su género (F o M):")
+        genero = genero.upper()
+        if not genero in ['F', 'M']:
+            print("El genero no es válido")
+            input("Presione enter para continuar......")
+            continue
+        
+        celular = input("ingrese su celular :")
+        tipo = input("Ingrese tipo de cliente 1.-Premium 2.-Gold 3.-Silver")
+        if not tipo in ['1', '2', '3']:
+            print("El tipo no es válido")
+            input("Presione enter para continuar......")
+            continue
+
+        cliente = [rut, nombre, direccion, comuna, correo, edad,genero,celular,tipo, suscrito]
+        clientes.append(cliente)
+
     elif opcion == 2:
         print("Seleccionó la opción 2")
     elif opcion == 3:
