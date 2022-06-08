@@ -6,6 +6,7 @@ print(arreglo)
 
 print("Cantidad de dimensiones: ", arreglo.ndim)
 print("Cantidad de elementos  : ", arreglo.shape)
+print("Cantidad de elementos  : ", len(arreglo))
 # devuelve los valores que estan dentro del rango del indice
 # 1 al 5 - 1, o sea hasta el 4
 print("Elementos seleccionados: ", arreglo[1:5])
