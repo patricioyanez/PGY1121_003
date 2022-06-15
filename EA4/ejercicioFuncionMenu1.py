@@ -19,8 +19,8 @@ num2 = 0
 opcion = "0"
 listaDeOpciones = ["1","2","3","4","5"]
 # 3.- SOLICITAR LOS DATOS
-print("\n ********* Calculadora ********")
 while opcion != "5":
+    print("\n ********* Calculadora ********")
     print("==== Menu principal ====")
     print("1.- Sumar")
     print("2.- Restar")
