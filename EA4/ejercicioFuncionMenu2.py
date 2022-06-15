@@ -1,12 +1,57 @@
 # importar numpy => pip install numpy
 import numpy as nu
-casillero = nu.array([["","",""],["","",""],["","",""] ]) # matriz de 3x3
+casillero = nu.array([["","",""],["","",""],["","",""] ], dtype=object) # matriz de 3x3
 
 # definir funciones
 def arrendar(casillero):
-    pass
+    print("**** Arriendo de casilleros *****")
+    print("Ingrese tipo de casillero:")
+    print("1.- Nivel 1 $10000")
+    print("2.- Nivel 2 $5000")
+    print("3.- Nivel 3 $2000")
+    try:
+        opcion = int(input("Ingrese tipo de casillero  : "))
+        fila = opcion - 1
+        mostrarCasillerosDisponibles(casillero, fila)
+        nroCasillero = int(input("Ingrese número de casillero: "))
+        columna = nroCasillero - 1
+        nombre = input("Ingrese nombre del cliente : ")
+        casillero[fila, columna] = nombre
+        print(casillero)
+    except:
+        print("Error en el ingreso de opción")
+        input("Presione enter para volver al menú...")
+        return
+
+def mostrarCasillerosDisponibles(casillero, fila):
+    nroCasillero = 1
+    print("Casilleros disponibles de la fila", fila+1 )
+    for columna in casillero[fila]:
+        if columna == "":
+            print("", nroCasillero)
+        nroCasillero +=1
+        
+
+
 def mostrarDisponible(casillero):
-    pass
+    print("*** Disponibilidad de casilleros ***")
+    listado = ""
+    nroCasillero = 1
+    valor = ""
+    for filas in casillero:
+        for columna in filas:
+            if columna == "":
+                valor = str(nroCasillero)
+            else:
+                valor = "X"
+            listado += valor + " " # "acumulador"
+            nroCasillero+=1
+        listado += "\n"
+    print(listado)
+    input("Presione enter para volver al menú...")
+
+
+
 def mostrarCliente(casillero):
     pass
 def mostrarGanancias(casillero):
